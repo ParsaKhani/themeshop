@@ -1,0 +1,1035 @@
+/*@import "normalize.css";*/
+@import "responsive.css";
+
+@font-face {
+    font-family: 'calibri';
+    src: url('../font/Calibri.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: 'calibri';
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* css header */
+/*first container*/
+div.top-header-nav {
+    border-bottom: 1px solid #d6d6d6;
+}
+
+nav.first-nav {
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+nav.second-nav {
+    flex-grow: 0;
+}
+
+div.top-header-nav nav ul{
+    display: flex;
+}
+
+nav > ul > li > a > i{
+    color: #686868;
+    font-size: 17px;
+}
+
+div.top-header-nav nav ul li a {
+    text-transform: capitalize;
+    height: 45px;
+    line-height: 45px;
+    color: #000;
+    font-family: "calibri";
+    font-size: 14px;
+    display: block;
+}
+
+div.top-header-nav > nav > ul > li > a::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 17px;
+    vertical-align: middle;
+    background-color: #b8b8b8;
+    margin:0 17px;
+}
+
+div.top-header-nav > nav > ul > li:last-child > a::after {
+    display: none;
+}
+
+div.top-header-nav nav ul li:hover a {
+    color: red;
+} 
+
+nav.second-nav ul li a i {
+    display: inline-block;
+    vertical-align: middle;
+    color: #949494;
+}
+/*second container*/
+div.main-child {
+    display: flex;
+}
+
+div.main-child > div.logo > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/*search section*/
+div.for-border {
+    flex-grow: 1;
+    text-align: center;
+}
+
+ div.search-section {
+    border: 1px solid #a9a9a9;
+    display: inline-block;
+}
+
+div.search-section select {
+    color: #2c2b2a;
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: white;
+    border: none;
+}
+    
+div.search-section > input {
+    border: none;
+}
+
+div.search-section input::before {
+    content: "";
+    display: inline-block;
+    background-color: #dbdbdb;
+    width: 1px;
+    height: 20px;
+}
+
+div.search-section > i {
+    background-color: red;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    vertical-align: bottom;
+    float: right;
+}
+
+ul.button-section {
+    flex-basis: 30%;
+    height: 40px;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+a.circle-button {
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
+
+a.circle-button > i {
+    color: #737373;
+}
+
+a.circle-button div.badge {
+    position: absolute;
+    border: 1px solid #c4c4c4;
+    border-radius: 50%;
+    color: gray;
+    text-align: center;
+    left: 50%;
+    top: -15px;
+    transition: 0.2s;
+    background-color: #fff;
+    color: #7c7c7c;
+}
+
+ul.button-section > div.cart-text {
+    text-align: center;
+    text-transform: capitalize;
+    color: #010101;
+    padding-top: 5px;
+    margin-right: 0;
+}
+
+ul.button-section div.minicart {
+    position: absolute;
+    width: 100%;
+    left: 65px;
+    top: 100%;
+    text-transform: capitalize;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+li.shopping-button:hover div.minicart{
+    visibility: visible;
+    opacity: 1;
+}
+
+div.minicart-header {
+    width: 100%;
+    background-color: floralwhite;
+    color: #404040;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+ul.sold-products {
+    width: 100%;
+    background-color: #fff;
+    color: #666;
+}
+
+ul.sold-products > li {
+    display: flex;
+    border-bottom: 1px solid #bfc3c4;
+    padding: 15px 15px;
+    text-transform: capitalize;
+    position: relative;
+    transition: 0.5s;
+}
+
+div.product-details {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    line-height: 1.5;
+}
+
+span.remove {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    color: #666;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+div.product-pic > img {
+    display: block;
+    width: 115px;
+    height: 115px;
+}
+
+a.circle-button:hover {
+    background-color: #efefef;
+}
+
+a.circle-button:hover div.badge {
+    background-color: red;
+    color: white;
+}
+ /*css menu*/
+section.menu-section {
+    width: 100%;
+    background-color: #efefef;
+}
+
+ul.menu {
+    display: flex;
+}
+
+ul.menu > li > a {
+    color: #010101;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: capitalize;
+}
+
+ul.menu > li:first-child > a {
+    padding: 0 0;
+}
+
+ul.menu > li > a:hover {
+    background-color: red;
+    color: white;
+}
+
+ul.menu > li > div.parent {
+    position: absolute;
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #ffffff;
+}
+
+ul.menu > li > div.parent > div.slide {
+    flex-grow: 1;
+}
+
+ul.sub-menu {
+    border: 1px solid #c9c9c9;
+}
+
+ul.sub-menu > li {
+    padding: 0 20px;
+}
+
+ul.menu > li > a:hover > i {
+    color: white;
+}
+
+ul.sub-menu > li > a {
+    color: #676767;
+    height: 55px;
+    padding: 0 20px;
+    text-transform: capitalize;
+    transition: 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.sub-menu > li > a > i{
+    color: #a4a4a4
+}
+
+section.menu-section nav {
+    position: relative;
+}
+
+ul.sub-menu > li > a:hover {
+    color: white;
+    background-color: red;
+}
+
+ul.sub-menu > li > a:hover > i {
+    color: white;
+}
+
+ul.menu > li:hover > div.parent {
+    visibility: visible;
+    opacity: 1;
+}
+
+div.slide div.pic {
+    width: 100%;
+    height: calc( 100% - 100px);
+    background: url(../images/snow-board3.jpg) no-repeat center;
+    background-size: cover;
+    padding: 50px 0 0 50px;
+}
+
+div.pic div.text {
+    width: 335px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+div.text > h2 {
+    font-weight: 500;
+    font-size: 40px;
+    text-transform: inherit;
+    color: black;
+}
+
+div.slide div.text > p {
+    text-align: center;
+}
+
+div.text > h3 {
+    font-size: 40px;
+    color: black;
+    opacity: 0.5;
+    font-weight: 500;
+}
+
+div.text > button {
+    width: 145px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    text-transform: inherit;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+div.slide section.icons {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+section.icons div.icons-box {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+section.icons div.icons-box > span {
+    text-transform: capitalize;
+    color: gray;
+    font-family: cursive;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+section.icons div.icons-box i {
+    color: aqua;
+    font-size: 40px;
+}
+/*css bottom of the pictures*/
+div.snow-board-pictures {
+    width: 100%;
+    height: 625px;
+    padding: 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+div.snow-board-pictures div.picture-parent img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+ /*css logos section*/
+section.logos {
+    border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    margin: 5px 0 75px 0;
+    position: relative;
+}
+
+div.logos-slider {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    transition: 0.5s;
+
+}
+
+section.logos > i {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #c1c1c1;
+    color: #c1c1c1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+section.logos > i:last-of-type {
+    left: 100%;
+    transform: translate(-100% , -50%);
+}
+
+section.logos > i:hover {
+    border: 1px solid #ff2559;
+    color: #ffc7d6;
+}
+ /*css featured products and offers*/
+ div.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #dbdbdb;
+    position: relative;
+    color: #000;
+}
+
+div.row::after {
+    content: "";
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background-color: red;
+    z-index: 10;
+}
+
+div.row > h1 {
+    text-transform: capitalize;
+    flex-grow: 1;
+}
+
+div.arrow-parent > i {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border: 1px solid #c1c1c1;
+    margin-right: 5px;
+    color: #c1c1c1;
+}
+
+div.arrow-parent > i:last-child {
+    margin-right: 0;
+}
+
+div.arrow-parent > i:hover {
+    border: 1px solid #ff2559;
+    color: #ffc7d6;
+}
+
+section.boxes {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section.boxes div.large-box {
+    line-height: 1.5;
+    padding: 10px 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+d
+
+div.large-box div.image {
+    width: 100%;
+    height: 230px;
+    position: relative;
+}
+
+div.large-box div.image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+div.image div.discount {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 9px;
+    left: 15px;
+    background-color: red;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+div.large-box div.price {
+    width: 100%;
+    display: flex;
+    height: 10px;
+    line-height: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+div.price span.previous-price {
+    color: gray;
+    margin-right: 10px;
+    position: relative;
+}
+
+span.previous-price::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #848484;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+div.price span.recent-price {
+    color: red;
+    font-size: 25px;
+}
+
+div.out-of-stack span.recent-price {
+    color: gray;
+}
+
+div.out-of-stack ~ div.cart > a {
+    border: 1px solid #cbcbcb;
+    color: #d2d2d2;
+}
+
+div.large-box p {
+    margin: 20px 0;
+}
+div.large-box div.rate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+div.rate i:first-child ,
+div.rate i:nth-child(2),
+div.rate i:nth-child(3),
+div.rate i:nth-child(4) {
+    color: #ffd773;
+}
+
+div.rate span {
+    color: #a8a8a8;
+}
+
+div.large-box div.cart {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+}
+
+div.cart div.cart-icons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flexsssss;
+    align-items: center;
+}
+
+div.cart-icons > i {
+    margin-right: 20px;
+    color: #afafaf;
+}
+
+div.cart a {
+    display: block;
+    width: 140px;
+    height: 45px;
+    color: #fe0000;
+    border: 1px solid #fe0000;
+    text-transform: capitalize;
+    line-height: 45px;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 30;
+    user-select: none;
+}
+
+div.large-box div.for-hover {
+    width: 100%;
+    padding: 15px 15px;
+    text-transform: capitalize;
+    position: absolute;
+    left: 0;
+    bottom: -93px;
+    z-index: 10;
+    background-color: white;
+    display: none;
+}
+
+div.for-hover div.colors {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.for-hover div.colors div.color-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+div.large-box:after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 568px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    background-color: transparent;
+}
+
+div.large-box:hover::after {
+    display: block;
+    box-shadow: 0 0 10px 5px #f3f3f3;
+}
+
+div.large-box:hover div.for-hover {
+    display: block;
+}
+ /*new collection*/
+div.new-collection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+div.new-collection div.image-collection {
+    height: 380px;
+    position: relative;
+    padding: 0 10px;
+}
+
+ div.image-collection img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+ div.image-collection div.text {
+    position: absolute;
+    line-height: 1.5;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+div.text h2 {
+    color: white;
+}
+
+div.text a {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    text-align: center;
+    color: red;
+}
+
+div.new-collection div:nth-child(2) div.text a {
+    background-color: red;
+    color: white;
+}
+/*css news*/
+div.news-slider {
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: 0.5s;
+    position: relative;
+}
+
+ div.parent-news-box {
+    padding: 15px 15px;
+    line-height: 1.2;
+}
+
+div.parent-news-box div.news-box {
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+}
+
+div.news-box div.image {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 30px;
+}
+
+div.news-box div.image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+div.news-box div.news-icons {
+    display: flex;
+    justify-content: flex-start;
+    color: #585858;
+}
+
+div.news-icons span {
+    margin: 0 10px;
+}
+
+div.news-content {
+    padding: 20px 0;
+}
+
+div.news-content h3 {
+    font-size: 20px;
+    color: #585858;
+}
+
+div.news-content p {
+    color: #8b8b8b;
+}
+
+a.read {
+    margin-top: 30px;
+    color: #848484;
+    display: inline-block;
+    cursor: pointer;
+}
+
+a.read > i {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+a.read:hover {
+    color: red;
+}
+/*css visit store*/
+section.visit-store {
+    padding: 80px 0;
+    display: flex;
+}
+
+section.visit-store div.address {
+    flex-basis: 33.33%;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    justify-content: center;
+}
+
+div.address h1 {
+    text-align: left;
+    font-size: 30px;
+}
+
+div.address p {
+    text-align: center;
+    color: gray;
+    font-size: 16px;
+}
+
+div.address div.visit-border {
+    width: 100%;
+    height: 2px;
+    background-color: #dbdbdb;
+    position: relative;
+    margin: 25px 0 30px 0;
+    position: relative;
+}
+
+div.address div.visit-border::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+    height: 1px;
+    background-color: red;
+}
+
+section.visit-store div.map-image {
+    flex-basis: 66.66%;
+    height: 340px;
+}
+
+div.map-image img {
+    width: 100%;
+    height: 100%;
+}
+
+section.seo-text {
+    padding-bottom: 80px;
+}
+
+section.seo-text p {
+    margin: 40px 0;
+}
+
+section.seo-text a {
+    margin-top: 0;
+}
+/*css footer*/
+footer {
+    width: 100%;
+    background: url(../images/rsz_mountain.jpg) no-repeat center;
+    background-size: cover;
+}
+
+footer div.footer-layout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 28, 58, 0.6);
+}
+
+section.top-footer {
+    padding: 70px 0;
+    display: flex;
+    border-bottom: 1px solid gray;
+}
+
+section.top-footer div.sign-up {
+    display: flex;
+    color: white;
+    text-transform: capitalize;
+}
+
+section.top-footer div.submit-email {
+    height: 50px;
+    padding-left: 40px;
+    color: gray;
+    font-family: 'calibri';
+    font-size: 15px;
+    line-height: 50px;
+    display: flex;
+}
+
+div.submit-email input {
+    padding-left: 40px;
+    color: gray;
+    flex-grow: 1;
+}
+
+div.submit-email button {
+    text-transform: capitalize;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'calibri';
+    font-size: 15px;
+}
+
+section.top-footer div.sign-up i {
+    font-size: 50px;
+    color: white;
+    margin-right: 20px;
+}
+
+section.footer-content {
+    padding: 60px 0 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.footer-content div.footer-content-box {
+    color: #d1cfd2;
+}
+
+div.footer-content-box div.footer-headline {
+    margin-bottom: 40px;
+    color: white;
+}
+
+div.footer-headline h2 {
+    color: #fffffd;
+    position: relative;
+    text-transform: capitalize;
+}
+
+div.footer-headline h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 45px;
+    height: 2px;
+    background-color: red;
+}
+
+div.footer-content-box section.bottom-of-headline {
+    text-transform: capitalize;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+section.bottom-of-headline div.first-part {
+    height: 200px;
+}
+
+section.bottom-of-headline div.first-part ul li a {
+    color: #d1cfd2;
+}
+
+section.bottom-of-headline div.second-part {
+    height: 115px;
+    padding-top: 20px;
+}
+
+div.second-part h3 {
+    color: #fefefc;
+}
+
+section.bottom-of-headline div.second-part ul {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+div.footer-content-box section.bottom-of-headline div.no-padding {
+    padding-top: 0;
+}
+
+ div.second-part div.social-network-icons {
+    margin-top: 25px;
+}
+
+div.second-part div.social-network-icons i {
+    margin-right: 10px
+}
+
+section.footer-content > div:last-child > div.footer-headline {
+    display: flex;
+    align-items: center;
+}
+
+section.footer-content > div:last-child > div.footer-headline > h2 {
+    flex-grow: 1;
+}
+
+section.bottom-of-headline section.footer-news {
+    display: flex;
+    padding-bottom: 20px;
+    height: 100px;
+    overflow: hidden;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+section.footer-news p {
+    width: 150px;
+    overflow: hidden;
+}
+
+section.footer-news images img {
+    display: block;
+}
+
+div.footer-layout div.container > p {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    text-transform: capitalize;
+}
