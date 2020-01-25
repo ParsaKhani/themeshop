@@ -416,7 +416,6 @@ section.icons div.icons-box i {
 /*css bottom of the pictures*/
 div.snow-board-pictures {
     width: 100%;
-    height: 625px;
     padding: 15px 10px;
     display: flex;
     flex-wrap: wrap;
